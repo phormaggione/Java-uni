@@ -17,4 +17,7 @@ public class Cerchio {
     public void set_x(Cerchio obj, double new_x) {obj.x = new_x;}
     public void set_y(Cerchio obj, double new_y) {obj.y = new_y;}
     public void set_raggio(Cerchio obj, double new_raggio) {obj.raggio = new_raggio;}   
+
+    public double area() {return Math.PI * this.raggio * this.raggio;}
+    public double perimetro() {return 2 * Math.PI * this.raggio;}
 }
