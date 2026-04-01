@@ -10,14 +10,14 @@ public class Cerchio {
         this.y = 0;
     }
 
-    public double get_x(Cerchio obj) {return obj.x;}
-    public double get_y(Cerchio obj) {return obj.y;}
-    public double get_raggio(Cerchio obj) {return obj.raggio;}
+    public double getX() {return this.x;}
+    public double getY() {return this.y;}
+    public double getRaggio() {return this.raggio;}
 
-    public void set_x(Cerchio obj, double new_x) {obj.x = new_x;}
-    public void set_y(Cerchio obj, double new_y) {obj.y = new_y;}
-    public void set_raggio(Cerchio obj, double new_raggio) {obj.raggio = new_raggio;}   
+    public void setX(double newX) {this.x = newX;}
+    public void setY(double newY) {this.y = newY;}
+    public void setRaggio(double newRaggio) {this.raggio = newRaggio;}   
 
-    public double area() {return Math.PI * this.raggio * this.raggio;}
-    public double perimetro() {return 2 * Math.PI * this.raggio;}
+    public double area() {return Math.PI * this.raggio * this.raggio;} //metodi di istanza, il this non è obbligatorio
+    public double perimetro() {return 2 * Math.PI * this.raggio;} 
 }

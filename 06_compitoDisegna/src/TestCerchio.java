@@ -2,8 +2,14 @@ import java.util.Scanner;
 
 public class TestCerchio {
     public static void main(String[] args) {
-        Cerchio vector = new Cerchio[5];
-
+        Cerchio[] vector = new Cerchio[5];
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; i < vector.length; i++) {
+            System.out.println("Inserisci il raggio del cerchio in pos " +i);
+            vector[i] = new Cerchio(input.nextDouble());
+        }
+        input.close();
+        for (int i = 0; i < vector.length; i++) {System.out.println("Perimetro cerchio n"+i+": "+vector[i].perimetro());}
     }
 }
 
