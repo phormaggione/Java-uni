@@ -1,6 +1,6 @@
 /*import java.util.Scanner;
 
-/* public class BinToDec {
+    public class BinToDec {
     public static void main(String[] args) throws Exception {
             System.out.println("Inserisci la stringa binaria di massimo 8 caratteri:");
             Scanner input = new Scanner(System.in);
