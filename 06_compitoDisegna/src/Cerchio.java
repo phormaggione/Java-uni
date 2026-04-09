@@ -10,12 +10,12 @@ public class Cerchio {
         this.y = 0;
     }
 
-    public double getX() {return this.x;}
+    public double getX() {return this.x;} 
     public double getY() {return this.y;}
     public double getRaggio() {return this.raggio;}
 
     public void setX(double newX) {this.x = newX;}
-    public void setY(double newY) {this.y = newY;}
+    public void setY(double newY) {this.y = newY;} 
     public void setRaggio(double newRaggio) {this.raggio = newRaggio;}   
 
     public double area() {return Math.PI * this.raggio * this.raggio;} //metodi di istanza, il this non è obbligatorio

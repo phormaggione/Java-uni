@@ -27,7 +27,6 @@ public class Vettori {
         for(int i : new_vector) {
             System.out.println("\t" + i);
         }
-        
         input.close();
     }
 }
