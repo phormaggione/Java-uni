@@ -1,20 +1,3 @@
-import java.util.Scanner;
-
-public class TestCerchio {
-    public static void main(String[] args) {
-        Cerchio[] vector = new Cerchio[5];
-        Scanner input = new Scanner(System.in);
-        for (int i = 0; i < vector.length; i++) {
-            System.out.println("Inserisci il raggio del cerchio in pos " +i);
-            vector[i] = new Cerchio(input.nextDouble());
-        }
-        input.close();
-        for (int i = 0; i < vector.length; i++) {System.out.println("Perimetro cerchio n"+i+": "+vector[i].perimetro());}
-    }
-}
-
-
-
 /*
 Esercizio: Classe Cerchio
 Scrivere una classe Cerchio che rappresenta un cerchio nel piano cartesiano.
@@ -41,5 +24,19 @@ nell’array.
 Suggerimenti
 • Ricordati di importare java.util.Scanner nella classe di test.
 • Usa Math.PI per ottenere il valore di π.
-
 */
+
+import java.util.Scanner;
+
+public class TestCerchio {
+    public static void main(String[] args) {
+        Cerchio[] vector = new Cerchio[5];
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; i < vector.length; i++) {
+            System.out.println("Inserisci il raggio del cerchio in pos " +i);
+            vector[i] = new Cerchio(input.nextDouble());
+        }
+        input.close();
+        for (int i = 0; i < vector.length; i++) {System.out.println("Perimetro cerchio n"+i+": "+vector[i].perimetro());}
+    }
+}

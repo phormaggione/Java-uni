@@ -1,3 +1,13 @@
+/*
+Scrivere un programma in linguaggio Java che legga da tastiera
+un numero binario puro sotto forma di una stringa di caratter∏i (0 o 1)
+lunga al massimo 8 bit e la passi ad una funzione che restituisca
+l'equivalente valore in decimale. Per il calcolo della potenza di un numero
+si usi il metodo Math.pow(double a, double b) che restituisce a elevato alla potenza b.
+*/
+
+//DA FINIRE
+
 /*import java.util.Scanner;
 
     public class BinToDec {
