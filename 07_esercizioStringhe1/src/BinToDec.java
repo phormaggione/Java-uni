@@ -6,30 +6,46 @@ l'equivalente valore in decimale. Per il calcolo della potenza di un numero
 si usi il metodo Math.pow(double a, double b) che restituisce a elevato alla potenza b.
 */
 
-//no controlli a quanto pare
-//DA FINIRE
+//controlli non obbligatori
 
 import java.util.Scanner;
 
     public class BinToDec {
     public static void main(String[] args) throws Exception {
-            System.out.println("Inserisci la stringa binaria di massimo 8 caratteri:");
+            boolean controllo;
             Scanner input = new Scanner(System.in);
-            String bin = input.nextLine();
-            System.out.println("Hai inserito la stringa" + bin);
-            input.close();
+            String bin;
 
-            int numDec = binToDec(bin);
-            System.out.println("Conversione in decimale: "+numDec);
+            do {
+                controllo = true;
+                System.out.println("Inserisci la stringa binaria di massimo 8 caratteri:");
+                bin = input.nextLine();
+
+                if (bin.length() > 8) {
+                    System.out.println("Stringa troppo lunga");
+                    controllo = false;
+                }
+                else {
+                    for (int i = 0; i <bin.length(); i++) {
+                        if (bin.charAt(i) != '1' && bin.charAt(i) != '0') {
+                            System.out.println("Stringa non binaria");
+                            controllo = false;
+                            break;
+                        }
+                    }
+                }
+            }while (controllo == false);
+            input.close();
+            System.out.println("Il numero decimale è: " +binToDec(bin));
     }
 
-    public static int binToDec(String bin) {
+    public static double binToDec(String bin) {
         double dec = 0;
-        for (int i =0; i<bin.length(); i++) {
-            if (bin.charAt(i) == 1) { 
-                double potenzaDue = Math.pow(2, i);
-                dec = dec + potenzaDue;
-            }
+        short esponente = 0;
+        for (int i = bin.length() - 1; i >= 0; i--) {  //le stringhe si leggono da sx verso dx, i numeri binari da dx verso sx
+            if (bin.charAt(i) == '1')
+                dec = dec + Math.pow(2, esponente);
+        esponente++; //l'indice del for non corrisponde quindi alla potenza binaria da elevare, quindi serve una questa var
         }
         return dec;
     }

@@ -18,22 +18,19 @@ public class DeleteWhiteSpace {
     System.out.println("Inserisci la frase:");
     String str = input.nextLine();
     input.close();
-    System.out.println(""+elimina(str));
+    System.out.println(elimina(str));
     }
 
     public static StringBuffer elimina(String str) {
-        int indiceSpazio = 0;
-        int inizio = 0;
         StringBuffer sb = new StringBuffer();
         sb.append(str);
-        do {
-            indiceSpazio = sb.indexOf(" ", inizio);
-            if (indiceSpazio != -1) {
-                if(sb.charAt(indiceSpazio) == sb.charAt(indiceSpazio+1)) 
-                    sb.deleteCharAt(indiceSpazio);
-            }
-            inizio = indiceSpazio +1;
-        }while(indiceSpazio !=-1);
+        int inizio = 0;
+        while((inizio = sb.indexOf(" ", inizio)) != -1) {
+            if(inizio+1 < sb.length() && sb.charAt(inizio+1) == ' ')  //controllo sia l'out of bound che se il prossimo è uno spazio, in caso affermativo non incremento per eliminare successivamente anche un ipotetico contiguo
+                sb.deleteCharAt(inizio+1);
+            else
+                inizio++;
+        }
         return sb;
     }
 }
