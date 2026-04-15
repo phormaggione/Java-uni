@@ -22,14 +22,12 @@ public class Complex {
 
     public void setRe(double Re) {this.Re = Re;}
     public void setImm(double Imm) {this.Imm = Imm;}
-
+    
     public void stampa() {
-        if (this.Imm > 0)
+        if (this.Imm >= 0)
             System.out.println(this.Re +" +" +this.Imm +"i");
-        if (this.Imm < 0)
+        else
             System.out.println(this.Re +" " +this.Imm +"i");
-        else    
-            System.out.println(this.Re);
     }
 
     public double moduloComplex() {
@@ -39,7 +37,7 @@ public class Complex {
     public Complex sommaComplex(Complex OP) {
         return new Complex(this.Re + OP.Re , this.Imm + OP.Imm);   //ovviamnete bisogna creare un nuovo oggetto per poterlo passare e usiamo costruttore con parametri
     }                                                              //non servono get e set per accedere a Re ed Imm perchè oggetti della stessa classe
-    
+
     public Complex prodottoComplex(Complex OP) {
         /*
         il prodotto fra due numeri complessi z1 = a + ib e z2= c + id
