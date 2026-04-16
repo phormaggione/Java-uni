@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "VettoriDinamiciMain",
+            "request": "launch",
+            "mainClass": "VettoriDinamiciMain",
+            "projectName": "Java-uni_ac9deac7"
+        },
+        {
+            "type": "java",
             "name": "ArrayComplex",
             "request": "launch",
             "mainClass": "ArrayComplex",
