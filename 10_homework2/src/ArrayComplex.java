@@ -1,6 +1,7 @@
 public class ArrayComplex {
     public static void main(String[] args) throws Exception {
-
+        Complex[] vector = new Complex[3];
+        
     }
 
     public void InsertComplexFromTerminal(Complex[] array, int DIM) {
