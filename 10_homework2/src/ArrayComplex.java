@@ -3,52 +3,54 @@ import java.util.Scanner;
 public class ArrayComplex {
     public static void main(String[] args) throws Exception {
 
-        Scanner lettore = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         
         System.out.println("Inserisci la dimensione:");
-        int dim = lettore.nextInt();
+        int dim = input.nextInt();
 
         Complex[] vector = new Complex[dim];
-        InsertComplexFromTerminal(vector, dim);
-
-        lettore.close();
+        InsertComplexFromTerminal(vector, dim, input);
 
         PrintMenu();
+        
+        input.close();
 
     }
 
-    public static void InsertComplexFromTerminal(Complex[] array, int DIM) {
-        double tempRe;
-        double tempImm;
+    public static void InsertComplexFromTerminal(Complex[] array, int DIM, Scanner input) {
         for (int i = 0; i < DIM; i++) {
-            Scanner input = new Scanner(System.in);
             System.out.println("Inserire la parte reale del numero complesso n" +i);
-            tempRe = input.nextDouble();
+            double tempRe = input.nextDouble();
             System.out.println("Inserire la parte immaginaria del numero complesso n" +i);
-            tempImm = input.nextDouble();
+            double tempImm = input.nextDouble();
             array[i] = new Complex(tempRe,tempImm);
-            input.close();
         }
     }
 
-            public static void PrintAll(Complex[] array, int DIM) {
+    public static void PrintAll(Complex[] array, int DIM) {
+        for(int i = 0; i< DIM; i++) 
+            array[i].stampa();            
+    }
+
+    public static void BubbleSort(Complex[] array, int DIM) {
 
     }
 
-            public static void BubbleSort(Complex[] array, int DIM) {
-
-    }
-
-            public static boolean Search(Complex[] array, int DIM, Complex e, int[] pos) {
+    public static boolean Search(Complex[] array, int DIM, Complex e, int[] pos) {
+        for(int i = 0; i < dim ; i++) {
+            if (array[i].getRe() == e.getRe() && array[i].getImm() == e.getImm())
+                return true;      
         return false;
     }
 
-            public static void PrintAllModules(Complex[] array, int DIM) {
-
+    public static void PrintAllModules(Complex[] array, int DIM) {
+        for(int i = 0; i < DIM; i++) 
+            System.out.println("Modulo n " +i +" " +array[i].moduloComplex());
     }
 
-            public static void PrintMenu() {
-        
+    public static void PrintMenu() {
+                
     }
+
 
 }
