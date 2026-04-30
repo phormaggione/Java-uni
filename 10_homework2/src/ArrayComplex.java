@@ -37,10 +37,11 @@ public class ArrayComplex {
     }
 
     public static boolean Search(Complex[] array, int DIM, Complex e, int[] pos) {
-        for(int i = 0; i < dim ; i++) {
+        for(int i = 0; i < DIM ; i++) {
             if (array[i].getRe() == e.getRe() && array[i].getImm() == e.getImm())
                 return true;      
-        return false;
+        }
+            return false;
     }
 
     public static void PrintAllModules(Complex[] array, int DIM) {
