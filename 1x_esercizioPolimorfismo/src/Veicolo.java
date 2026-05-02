@@ -7,9 +7,9 @@ public abstract class Veicolo implements ElementoInventario {
     this.annoImmatricolazione = annoImmatricolazione;
     this.peso = peso;
     this.potenza = potenza;
-}
+    }
 
- private int annoImmatricolazione;   
+    private int annoImmatricolazione;   
     private int peso;
     private int potenza;
 
@@ -51,7 +51,7 @@ public abstract class Veicolo implements ElementoInventario {
 
     @Override
     public void printElementoInventario() {
-        this.printDatiVeicolo();
+        this.printDatiVeicolo();  //questo si fa perchè c'è un livello di separazione per chi eredita da veicolo, non sa necessariamente che implementa ElementoInventario, per questo c'è questa delega
     }
 
     public void printDatiVeicolo(){
@@ -74,7 +74,6 @@ public abstract class Veicolo implements ElementoInventario {
             return true;
         return false;
     }
-
 
     @Override
     public int hashCode() {

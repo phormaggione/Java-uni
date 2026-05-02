@@ -35,7 +35,7 @@ public class Complex {
     }
 
     public Complex sommaComplex(Complex OP) {
-        return new Complex(this.Re + OP.Re , this.Imm + OP.Imm);   //ovviamnete bisogna creare un nuovo oggetto per poterlo passare e usiamo costruttore con parametri
+        return new Complex(this.Re + OP.Re , this.Imm + OP.Imm);   //l'oggetto che ritorniamo non è gia istanziato quindi costruttore con parametri
     }                                                              //non servono get e set per accedere a Re ed Imm perchè oggetti della stessa classe
 
     public Complex prodottoComplex(Complex OP) {

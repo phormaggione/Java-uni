@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Inventario {
-    private java.util.List<ElementoInventario> listaInventario;
+    private java.util.List<ElementoInventario> listaInventario; //class collection, bisogna specificare il tipo
 
     public Inventario() {
         listaInventario = new ArrayList<ElementoInventario>(); //è tipo polimorfismo, impelemtanzione di interfaccia con correzzione??, array dinamico infatti no dim
@@ -24,7 +24,8 @@ public class Inventario {
     }
 
     public void printInventario() {
-        //finire
+        for (ElementoInventario e : listaInventario) //ciclo for fatto con for each in
+            e.printElementoInventario();
     }
 
 }
